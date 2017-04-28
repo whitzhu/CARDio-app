@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Deck from './utils.js'
+import Deck from '../utils.js'
 
-import CardEntry from './components/cardEntry'
+import CardEntry from './cardEntry'
+
 
 export default class App extends React.Component {
 
@@ -42,21 +43,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>CARDio</Text>
-        <CardEntry 
-          currentCard={this.state.currentCard}
-          nextCard={this.nextCard} />
-      </View>
+      <CardEntry 
+        currentCard={this.state.currentCard}
+        nextCard={this.nextCard} />
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
