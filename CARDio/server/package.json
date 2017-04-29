@@ -1,0 +1,12 @@
+{
+  "name": "CARDio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "server": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
