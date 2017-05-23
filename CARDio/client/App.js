@@ -1,21 +1,19 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { StackNavigator } from 'react-navigation'
-import Deck from './utils.js'
+import { StyleSheet, View } from 'react-native'
 
-import CardEntry from './components/cardEntry'
-import Home from './components/Home'
-import SelectDeckView from './components/SelectDeckView'
-import CreateDeckView from './components/CreateDeckView'
-import WorkoutView from './components/WorkoutView'
-import PreviewDeckView from './components/PreviewDeckView'
+import MainScreenTabNavigator from './components/navigator/MainScreenTabNavigator'
 
-const App = StackNavigator({
-  Home: { screen: Home },
-  SelectDeckView: { screen: SelectDeckView },
-  CreateDeckView: { screen: CreateDeckView },
-  WorkoutView: { screen: WorkoutView },
-  PreviewDeckView: { screen: PreviewDeckView }
+
+const App = () => (
+  <View style={styles.container}>
+    <MainScreenTabNavigator/>
+  </View>
+)
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
 })
 
 export default App
